@@ -23,3 +23,23 @@ function App() {
 }
 
 export default App
+
+
+
+// import React from 'react';
+// import {BrowserRouter as Router,Route,useLocation} from 'react-router-dom';
+
+// const ExampleComponent = () => {
+//   const location = useLocation();
+//   return <div>The current location is {location.pathname}</div>;
+// };
+
+// const App = () => (
+//   <Router>
+//     <Route path="/">
+//       <ExampleComponent />
+//     </Route>
+//   </Router>
+// );
+
+// export default App;

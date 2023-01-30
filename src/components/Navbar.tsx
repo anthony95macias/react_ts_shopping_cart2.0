@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Navbar () {
-    const {openCart, closeCart}= useShoppingCart()
+    const {openCart, cartQuantity}= useShoppingCart()
     return (
         <NavebarBS sticky="top" className="ng-white shadow-sm mb-3">
             <Container>
