@@ -1,45 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Routes, Route } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
-import { Home } from './pages/home'
-import { Store } from './pages/Store'
-import { About } from './pages/About'
-import { Navbar } from './components/Navbar'
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import { Home } from './pages/home';
+import { Store } from './pages/Store';
+import { About } from './pages/About';
+import { Navbar } from './components/Navbar';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
 function App() {
   return (
-    <ShoppingCartProvider>
-      <Navbar/>
-      <Container className='mb-4'> hi
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/store' element={<Store />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </Container>    
-    </ShoppingCartProvider>
-  )
+    <BrowserRouter>
+      <ShoppingCartProvider>
+        <Navbar />
+        <Container className='mb-4'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/store' element={<Store />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </Container>
+      </ShoppingCartProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
 
-
-
-// import React from 'react';
-// import {BrowserRouter as Router,Route,useLocation} from 'react-router-dom';
-
-// const ExampleComponent = () => {
-//   const location = useLocation();
-//   return <div>The current location is {location.pathname}</div>;
-// };
-
-// const App = () => (
-//   <Router>
-//     <Route path="/">
-//       <ExampleComponent />
-//     </Route>
-//   </Router>
-// );
-
-// export default App;
+export default App;
